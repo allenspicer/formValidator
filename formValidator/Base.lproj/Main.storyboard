@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -18,10 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="XTM-tY-leW">
-                                <rect key="frame" x="200" y="40" width="200" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="r41-Jb-qj0"/>
-                                </constraints>
+                                <rect key="frame" x="60" y="40" width="480" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -29,10 +27,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Address" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cyf-Ho-3Nz">
-                                <rect key="frame" x="200" y="78" width="200" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="rOY-bO-Qt5"/>
-                                </constraints>
+                                <rect key="frame" x="60" y="78" width="480" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -40,10 +35,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="City" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U9h-N7-16v">
-                                <rect key="frame" x="200" y="116" width="200" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="us6-9h-tlj"/>
-                                </constraints>
+                                <rect key="frame" x="60" y="116" width="480" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -51,10 +43,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="State" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5cz-J9-cmM">
-                                <rect key="frame" x="200" y="154" width="200" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="q7s-Kq-5wk"/>
-                                </constraints>
+                                <rect key="frame" x="60" y="154" width="480" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -62,10 +51,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Zip Code" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qnb-Mu-Tsk">
-                                <rect key="frame" x="200" y="192" width="200" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="Tkw-wF-RxQ"/>
-                                </constraints>
+                                <rect key="frame" x="60" y="192" width="480" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -73,10 +59,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gqa-Kq-Tmq">
-                                <rect key="frame" x="200" y="230" width="200" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="BO1-IL-mqn"/>
-                                </constraints>
+                                <rect key="frame" x="60" y="230" width="480" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -88,13 +71,19 @@
                         <constraints>
                             <constraint firstItem="gqa-Kq-Tmq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6SD-HE-H3F"/>
                             <constraint firstItem="XTM-tY-leW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8Tk-bC-Bk6"/>
+                            <constraint firstItem="Cyf-Ho-3Nz" firstAttribute="width" secondItem="XTM-tY-leW" secondAttribute="width" id="AeN-XW-Ce6"/>
+                            <constraint firstItem="5cz-J9-cmM" firstAttribute="width" secondItem="U9h-N7-16v" secondAttribute="width" id="AlF-IU-YgX"/>
                             <constraint firstItem="Qnb-Mu-Tsk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Fb2-iH-CqT"/>
                             <constraint firstItem="5cz-J9-cmM" firstAttribute="top" secondItem="U9h-N7-16v" secondAttribute="bottom" constant="8" id="KTz-O9-r3l"/>
+                            <constraint firstItem="U9h-N7-16v" firstAttribute="width" secondItem="Cyf-Ho-3Nz" secondAttribute="width" id="RMn-iw-ri6"/>
                             <constraint firstItem="5cz-J9-cmM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UVP-10-Gag"/>
                             <constraint firstItem="U9h-N7-16v" firstAttribute="top" secondItem="Cyf-Ho-3Nz" secondAttribute="bottom" constant="8" id="WAL-pM-lef"/>
+                            <constraint firstItem="XTM-tY-leW" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="bed-SD-dQz"/>
+                            <constraint firstItem="Qnb-Mu-Tsk" firstAttribute="width" secondItem="5cz-J9-cmM" secondAttribute="width" id="fJm-po-Gto"/>
                             <constraint firstItem="Cyf-Ho-3Nz" firstAttribute="top" secondItem="XTM-tY-leW" secondAttribute="bottom" constant="8" id="l9t-8h-JbG"/>
                             <constraint firstItem="gqa-Kq-Tmq" firstAttribute="top" secondItem="Qnb-Mu-Tsk" secondAttribute="bottom" constant="8" id="qta-hT-uBC"/>
                             <constraint firstItem="U9h-N7-16v" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vis-jt-hVq"/>
+                            <constraint firstItem="gqa-Kq-Tmq" firstAttribute="width" secondItem="Qnb-Mu-Tsk" secondAttribute="width" id="wG4-qF-dKR"/>
                             <constraint firstItem="Qnb-Mu-Tsk" firstAttribute="top" secondItem="5cz-J9-cmM" secondAttribute="bottom" constant="8" id="xml-fk-Hl5"/>
                             <constraint firstItem="XTM-tY-leW" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="yCQ-Ia-eMT"/>
                             <constraint firstItem="Cyf-Ho-3Nz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yxd-A2-OeP"/>
@@ -102,7 +91,10 @@
                     </view>
                     <connections>
                         <outlet property="addressTextField" destination="Cyf-Ho-3Nz" id="XrO-9w-feE"/>
+                        <outlet property="cityTextField" destination="U9h-N7-16v" id="VUc-UK-0NA"/>
                         <outlet property="nameTextField" destination="XTM-tY-leW" id="3Yi-FR-sDe"/>
+                        <outlet property="phoneTextField" destination="gqa-Kq-Tmq" id="oyO-yo-ga4"/>
+                        <outlet property="stateTextField" destination="5cz-J9-cmM" id="2aq-zT-EEn"/>
                         <outlet property="zipTextField" destination="Qnb-Mu-Tsk" id="oUG-yL-vvE"/>
                     </connections>
                 </viewController>

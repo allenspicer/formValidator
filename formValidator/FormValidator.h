@@ -14,6 +14,13 @@
 
 -(BOOL) isValidAddress:(NSString*)addressString;
 
+-(BOOL) isCity:(NSString*)cityString;
+
+-(BOOL) isState:(NSString*)stateString;
+
 -(BOOL) isZipCode:(NSString*)zipString;
+
+-(BOOL) isPhone:(NSString*)phoneString;
+
 
 @end

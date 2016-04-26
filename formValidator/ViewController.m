@@ -12,10 +12,11 @@
 @interface ViewController () <UITextFieldDelegate> 
 
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
-
 @property (weak, nonatomic) IBOutlet UITextField *addressTextField;
-
+@property (weak, nonatomic) IBOutlet UITextField *cityTextField;
+@property (weak, nonatomic) IBOutlet UITextField *stateTextField;
 @property (weak, nonatomic) IBOutlet UITextField *zipTextField;
+@property (weak, nonatomic) IBOutlet UITextField *phoneTextField;
 
 
 
@@ -44,20 +45,87 @@
 }
 
 
+
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
-    if ([textField isEqual: self.nameTextField]){
-        if ([self.formValidator validateName:self.nameTextField.text]){
-            [self.nameTextField resignFirstResponder];
-            [self.addressTextField becomeFirstResponder];
+  
+#pragma mark Name Validation
+    if ([textField isEqual: self.nameTextField])
+        //when user is working in name text field
+            {
+            if ([self.formValidator validateName:self.nameTextField.text])
+             //when user input passes name validation (space between two strings)
+                    {
+                    [self.nameTextField resignFirstResponder];
+                    //remove cursor from name field
+                    [self.addressTextField becomeFirstResponder];
+                    //place cursor on address field
+                    return YES;
+                    }
+            return [self.formValidator validateName: self.nameTextField.text];
+            //
+            }
+    
+#pragma mark Address Validation
+    else if ([textField isEqual:self.addressTextField])
+            {
+            if ([self.formValidator isValidAddress:self.addressTextField.text])
+                    {
+                    [self.addressTextField resignFirstResponder];
+                    [self.cityTextField becomeFirstResponder];
+                    return YES;
+                    }
+            return [self.formValidator isValidAddress: self.addressTextField.text];
+            }
+    
+#pragma mark City Validation
+    else if ([textField isEqual:self.cityTextField])
+    {
+        if ([self.formValidator validateName:self.cityTextField.text])
+        {
+            [self.addressTextField resignFirstResponder];
+            [self.cityTextField becomeFirstResponder];
             return YES;
         }
-        return [self.formValidator validateName: self.nameTextField.text];
-    }else if ([textField isEqual:self.addressTextField]){
         return [self.formValidator isValidAddress: self.addressTextField.text];
-    }else if ([textField isEqual:self.zipTextField]){
-        return [self.formValidator isZipCode: self.zipTextField.text];
-        
+    }
+    
+#pragma mark State Validation
+    else if ([textField isEqual:self.addressTextField])
+    {
+        if ([self.formValidator validateName:self.addressTextField.text])
+        {
+            [self.addressTextField resignFirstResponder];
+            [self.cityTextField becomeFirstResponder];
+            return YES;
         }
+        return [self.formValidator isValidAddress: self.addressTextField.text];
+    }
+
+#pragma mark Zip Code Validation
+    else if ([textField isEqual:self.zipTextField])
+        {
+        if ([self.formValidator isZipCode:self.zipTextField.text])
+                {
+                [self.zipTextField resignFirstResponder];
+                [self.phoneTextField becomeFirstResponder];
+                return YES;
+                }
+            return [self.formValidator isZipCode: self.zipTextField.text];
+        }
+            
+#pragma mark Phone Number Validation
+        else if ([textField isEqual:self.addressTextField])
+        {
+            if ([self.formValidator validateName:self.addressTextField.text])
+            {
+                [self.addressTextField resignFirstResponder];
+                [self.cityTextField becomeFirstResponder];
+                return YES;
+            }
+            return [self.formValidator isValidAddress: self.addressTextField.text];
+        }
+    
+    
         return NO;
     }
 

@@ -30,7 +30,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    self.addressTextField.placeholder = @"Address";
+   
+    // self.addressTextField.placeholder = @"Address";
+   //alternative way to set  in code rather than storyboard
     
     //create instance of formvalidator
     self.formValidator = [[FormValidator alloc]init];
@@ -59,6 +61,9 @@
                     //remove cursor from name field
                     [self.addressTextField becomeFirstResponder];
                     //place cursor on address field
+                    self.nameTextField.backgroundColor = [UIColor greenColor];
+                    //change color to show user input is valid
+
                     return YES;
                     }
             return [self.formValidator validateName: self.nameTextField.text];
@@ -72,6 +77,7 @@
                     {
                     [self.addressTextField resignFirstResponder];
                     [self.cityTextField becomeFirstResponder];
+                    self.addressTextField.backgroundColor = [UIColor greenColor];
                     return YES;
                     }
             return [self.formValidator isValidAddress: self.addressTextField.text];
@@ -84,6 +90,7 @@
         {
             [self.cityTextField resignFirstResponder];
             [self.stateTextField becomeFirstResponder];
+            self.cityTextField.backgroundColor = [UIColor greenColor];
             return YES;
         }
         return [self.formValidator isCity: self.cityTextField.text];
@@ -96,6 +103,7 @@
         {
             [self.stateTextField resignFirstResponder];
             [self.zipTextField becomeFirstResponder];
+            self.stateTextField.backgroundColor = [UIColor greenColor];
             return YES;
         }
         return [self.formValidator isState: self.stateTextField.text];
@@ -108,6 +116,7 @@
                 {
                 [self.zipTextField resignFirstResponder];
                 [self.phoneTextField becomeFirstResponder];
+                self.zipTextField.backgroundColor = [UIColor greenColor];
                 return YES;
                 }
             return [self.formValidator isZipCode: self.zipTextField.text];
@@ -119,10 +128,12 @@
             if ([self.formValidator validateName:self.phoneTextField.text])
             {
                 [self.phoneTextField resignFirstResponder];
+                self.phoneTextField.backgroundColor = [UIColor greenColor];
                 return YES;
             }
             return [self.formValidator isPhone: self.phoneTextField.text];
         }
+        else
     
     
         return NO;

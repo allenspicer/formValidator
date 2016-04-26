@@ -29,17 +29,20 @@
 }
 
 
--(BOOL) isCity:(NSString *)cityString{
-    BOOL rc = NO;
-   NSCharacterSet * set = [NSCharacterSet characterSetWithCharactersInString:@"qwertyuiopasdfghjklzxcvbnm"];
-    set = [set invertedSet];
-    NSRange myRange = [cityString rangeOfCharacterFromSet:set];
-    rc = (myRange.location == NSNotFound);
-    rc = ([cityString length]<2) && rc
-    ;
-    return rc;
-}
+//-(BOOL) isCity:(NSString *)cityString{
+//    BOOL rc = NO;
+//   NSCharacterSet * set = [NSCharacterSet characterSetWithCharactersInString:@"qwertyuiopasdfghjklzxcvbnm"];
+//    set = [set invertedSet];
+//    NSRange myRange = [cityString rangeOfCharacterFromSet:set];
+//    rc = (myRange.location == NSNotFound);
+//    rc = ([cityString length]<2) && rc
+//    ;
+//    return rc;
+//}
 
+-(BOOL) isCity:(NSString *)cityString{
+    return ([cityString length] > 1);
+}
 
 -(BOOL) isState:(NSString *)stateString{
     return ([stateString length] > 1);

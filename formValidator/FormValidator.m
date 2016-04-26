@@ -45,7 +45,7 @@
 }
 
 -(BOOL) isState:(NSString *)stateString{
-    return ([stateString length] > 1);
+    return ([stateString length] > 3);
 }
 
 
@@ -59,15 +59,6 @@
     return rc;
 }
 
-//should change to NSTextCheckingTypePhoneNumber
-//-(BOOL) isPhone:(NSString *)phoneString{
-//    BOOL rc = NO;
-//    NSCharacterSet * set = [NSCharacterSet characterSetWithCharactersInString:@"1234567890"];
-//    
-//    rc = ([phoneString length]==10) && ([phoneString rangeOfCharacterFromSet:set].location != NSNotFound);
-//    return rc;
-//    
-//}
 
 -(BOOL) isPhone:(NSString *)phoneString{
     NSTextCheckingType detectorType = NSTextCheckingTypePhoneNumber;

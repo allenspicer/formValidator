@@ -13,6 +13,7 @@
 		9FA2A1211CCFB6E10080129B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FA2A11F1CCFB6E10080129B /* Main.storyboard */; };
 		9FA2A1231CCFB6E10080129B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FA2A1221CCFB6E10080129B /* Assets.xcassets */; };
 		9FA2A1261CCFB6E10080129B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FA2A1241CCFB6E10080129B /* LaunchScreen.storyboard */; };
+		9FA2A12F1CCFC00D0080129B /* FormValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA2A12E1CCFC00D0080129B /* FormValidator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		9FA2A1221CCFB6E10080129B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9FA2A1251CCFB6E10080129B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9FA2A1271CCFB6E10080129B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9FA2A12D1CCFC00D0080129B /* FormValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormValidator.h; sourceTree = "<group>"; };
+		9FA2A12E1CCFC00D0080129B /* FormValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormValidator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,8 @@
 				9FA2A11A1CCFB6E10080129B /* AppDelegate.m */,
 				9FA2A11C1CCFB6E10080129B /* ViewController.h */,
 				9FA2A11D1CCFB6E10080129B /* ViewController.m */,
+				9FA2A12D1CCFC00D0080129B /* FormValidator.h */,
+				9FA2A12E1CCFC00D0080129B /* FormValidator.m */,
 				9FA2A11F1CCFB6E10080129B /* Main.storyboard */,
 				9FA2A1221CCFB6E10080129B /* Assets.xcassets */,
 				9FA2A1241CCFB6E10080129B /* LaunchScreen.storyboard */,
@@ -150,6 +155,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FA2A12F1CCFC00D0080129B /* FormValidator.m in Sources */,
 				9FA2A11E1CCFB6E10080129B /* ViewController.m in Sources */,
 				9FA2A11B1CCFB6E10080129B /* AppDelegate.m in Sources */,
 				9FA2A1181CCFB6E10080129B /* main.m in Sources */,

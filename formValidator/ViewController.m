@@ -47,12 +47,12 @@
 }
 
 
-
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
   
 #pragma mark Name Validation
     if ([textField isEqual: self.nameTextField])
         //when user is working in name text field
+        
             {
             if ([self.formValidator validateName:self.nameTextField.text])
              //when user input passes name validation (space between two strings)

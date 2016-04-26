@@ -86,7 +86,7 @@
 #pragma mark City Validation
     else if ([textField isEqual:self.cityTextField])
     {
-        if ([self.formValidator validateName:self.cityTextField.text])
+        if ([self.formValidator isCity:self.cityTextField.text])
         {
             [self.cityTextField resignFirstResponder];
             [self.stateTextField becomeFirstResponder];
@@ -125,7 +125,7 @@
 #pragma mark Phone Number Validation
         else if ([textField isEqual:self.phoneTextField])
         {
-            if ([self.formValidator validateName:self.phoneTextField.text])
+            if ([self.formValidator isPhone:self.phoneTextField.text])
             {
                 [self.phoneTextField resignFirstResponder];
                 self.phoneTextField.backgroundColor = [UIColor greenColor];

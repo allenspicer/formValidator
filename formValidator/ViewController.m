@@ -82,23 +82,23 @@
     {
         if ([self.formValidator validateName:self.cityTextField.text])
         {
-            [self.addressTextField resignFirstResponder];
-            [self.cityTextField becomeFirstResponder];
+            [self.cityTextField resignFirstResponder];
+            [self.stateTextField becomeFirstResponder];
             return YES;
         }
-        return [self.formValidator isValidAddress: self.addressTextField.text];
+        return [self.formValidator isCity: self.cityTextField.text];
     }
     
 #pragma mark State Validation
-    else if ([textField isEqual:self.addressTextField])
+    else if ([textField isEqual:self.stateTextField])
     {
-        if ([self.formValidator validateName:self.addressTextField.text])
+        if ([self.formValidator validateName:self.stateTextField.text])
         {
-            [self.addressTextField resignFirstResponder];
-            [self.cityTextField becomeFirstResponder];
+            [self.stateTextField resignFirstResponder];
+            [self.zipTextField becomeFirstResponder];
             return YES;
         }
-        return [self.formValidator isValidAddress: self.addressTextField.text];
+        return [self.formValidator isState: self.stateTextField.text];
     }
 
 #pragma mark Zip Code Validation
@@ -114,15 +114,14 @@
         }
             
 #pragma mark Phone Number Validation
-        else if ([textField isEqual:self.addressTextField])
+        else if ([textField isEqual:self.phoneTextField])
         {
-            if ([self.formValidator validateName:self.addressTextField.text])
+            if ([self.formValidator validateName:self.phoneTextField.text])
             {
-                [self.addressTextField resignFirstResponder];
-                [self.cityTextField becomeFirstResponder];
+                [self.phoneTextField resignFirstResponder];
                 return YES;
             }
-            return [self.formValidator isValidAddress: self.addressTextField.text];
+            return [self.formValidator isPhone: self.phoneTextField.text];
         }
     
     

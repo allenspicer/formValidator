@@ -10,6 +10,11 @@
 
 @interface ViewController ()
 
+@property (weak, nonatomic) IBOutlet UITextField *nameTextField;
+
+@property (weak, nonatomic) IBOutlet UITextField *addressTextField;
+
+
 @end
 
 @implementation ViewController
@@ -17,6 +22,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    self.addressTextField.placeholder = @"Address";
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {

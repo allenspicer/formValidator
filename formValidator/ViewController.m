@@ -37,6 +37,8 @@
     //create instance of formvalidator
     self.formValidator = [[FormValidator alloc]init];
     
+    self.title = @"Validator";
+    
     
     
 }
